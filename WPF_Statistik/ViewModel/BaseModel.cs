@@ -10,8 +10,9 @@ namespace WPF_Statistik
     public class BaseModel : INotifyPropertyChanged
     {
         // Declare the PropertyChanged event
+        #nullable disable
         public event PropertyChangedEventHandler PropertyChanged;
-
+        #nullable enable
         // OnPropertyChanged will raise the PropertyChanged event passing the
         // source property that is being updated.
         protected void OnPropertyChanged(String propertyName)

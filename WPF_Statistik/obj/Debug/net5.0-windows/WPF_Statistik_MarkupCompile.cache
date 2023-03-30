@@ -1,5 +1,5 @@
 ﻿WPF_Statistik
-1.0.0.0
+
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\riedld2\Desktop\WPF_Statistik\WPF_Statistik\App.xaml
 2-1698785635
 
-92081013797
+71759039620
 193-1891726104
 View\AufnahmeDetailDlg.xaml;View\MainWindow.xaml;
 

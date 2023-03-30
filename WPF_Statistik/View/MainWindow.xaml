@@ -6,14 +6,13 @@
         xmlns:local="clr-namespace:WPF_Statistik"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid DataContext="{StaticResource mvmodel}">
         <DataGrid/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}">
+        <DataGrid d:ItemsSource="{Binding LstData}" SelectedItem="{Binding SelData}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="50*" Binding="{Binding Bezeichnung}" Foreground="LightGray" Header="Bezeichnung"/>
+                <DataGridTextColumn Width="50*" Binding="{Binding Wert}" Foreground="LightGray" Header="Messwert"/>
+            </DataGrid.Columns>
         </DataGrid>
-        <Canvas>
-            <Border BorderBrush="Black" BorderThickness="2" Canvas.Left="18" Canvas.Bottom="15">                
-                <Rectangle Fill="White" Height="200" Width="760"/>
-            </Border>
-        </Canvas>
     </Grid>
 </Window>
