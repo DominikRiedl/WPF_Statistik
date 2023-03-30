@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPF_Statistik.ViewModel
+namespace WPF_Statistik
 {
     public class BaseModel : INotifyPropertyChanged
     {
