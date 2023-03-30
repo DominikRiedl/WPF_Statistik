@@ -8,10 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid DataContext="{StaticResource mvmodel}">
         <DataGrid/>
-        <DataGrid d:ItemsSource="{Binding LstData}" SelectedItem="{Binding SelData}">
+        <DataGrid x:Name="lbData" Margin="0,0,150,10" CanUserResizeRows="False" CanUserAddRows="False" ItemsSource="{Binding LstData}" AutoGenerateColumns="False" SelectedItem="{Binding SelData}">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="50*" Binding="{Binding Bezeichnung}" Foreground="LightGray" Header="Bezeichnung"/>
-                <DataGridTextColumn Width="50*" Binding="{Binding Wert}" Foreground="LightGray" Header="Messwert"/>
+                <DataGridTextColumn Width="100" Binding="{Binding Bezeichnung}" Foreground="Black" Header="Bezeichnung"/>
+                <DataGridTextColumn Width="100" Binding="{Binding Wert}" Foreground="Black" Header="Messwert"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
