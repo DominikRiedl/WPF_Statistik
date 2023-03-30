@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\FWI2\\C#\\Projekte\\WPF_Statistik\\WPF_Statistik\\WPF_Statistik.csproj": {}
+    "C:\\Users\\riedld2\\Desktop\\WPF_Statistik\\WPF_Statistik\\WPF_Statistik.csproj": {}
   },
   "projects": {
-    "H:\\FWI2\\C#\\Projekte\\WPF_Statistik\\WPF_Statistik\\WPF_Statistik.csproj": {
+    "C:\\Users\\riedld2\\Desktop\\WPF_Statistik\\WPF_Statistik\\WPF_Statistik.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\FWI2\\C#\\Projekte\\WPF_Statistik\\WPF_Statistik\\WPF_Statistik.csproj",
+        "projectUniqueName": "C:\\Users\\riedld2\\Desktop\\WPF_Statistik\\WPF_Statistik\\WPF_Statistik.csproj",
         "projectName": "WPF_Statistik",
-        "projectPath": "H:\\FWI2\\C#\\Projekte\\WPF_Statistik\\WPF_Statistik\\WPF_Statistik.csproj",
+        "projectPath": "C:\\Users\\riedld2\\Desktop\\WPF_Statistik\\WPF_Statistik\\WPF_Statistik.csproj",
         "packagesPath": "C:\\Users\\riedld2\\.nuget\\packages\\",
-        "outputPath": "H:\\FWI2\\C#\\Projekte\\WPF_Statistik\\WPF_Statistik\\obj\\",
+        "outputPath": "C:\\Users\\riedld2\\Desktop\\WPF_Statistik\\WPF_Statistik\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
