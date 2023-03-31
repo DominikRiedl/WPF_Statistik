@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Statistik"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid DataContext="{StaticResource mvmodel}">
-        <DataGrid/>
-        <DataGrid x:Name="lbData" Margin="0,0,150,10" CanUserResizeRows="False" CanUserAddRows="False" ItemsSource="{Binding LstData}" AutoGenerateColumns="False" SelectedItem="{Binding SelData}">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Background="LightGray" DataContext="{StaticResource mvmodel}">
+        <DataGrid Background="White" x:Name="lbData" Margin="10,13,140,283" CanUserResizeRows="False" CanUserAddRows="False" ItemsSource="{Binding LstData}" AutoGenerateColumns="False" SelectedItem="{Binding SelData}" SelectionChanged="LbData_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="100" Binding="{Binding Bezeichnung}" Foreground="Black" Header="Bezeichnung"/>
                 <DataGridTextColumn Width="100" Binding="{Binding Wert}" Foreground="Black" Header="Messwert"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="btNew" Background="LightGoldenrodYellow" Content="Neu" Margin="690,10,10,383" Click="btNew_Click"/>
+        <Button x:Name="btDel" Content="Löschen" Background="LightGoldenrodYellow" IsEnabled="false" Margin="690,56,10,337" Click="btDel_Click"/>
+        <Canvas x:Name="cnvStats" Background="white" Margin="10,217,10,10">
+            
+        </Canvas>      
     </Grid>
 </Window>
