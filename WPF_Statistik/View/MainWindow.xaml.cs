@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Linq;
 
 namespace WPF_Statistik
 {
@@ -32,6 +22,11 @@ namespace WPF_Statistik
             InitializeComponent();
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            FillCanvas();
+        }
+
         private void LbData_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (lbData.SelectedItem == null)
@@ -46,31 +41,40 @@ namespace WPF_Statistik
 
         private void btNew_Click(object sender, RoutedEventArgs e)
         {
+            // TODO DetailDlg
 
+            FillCanvas();
         }
 
         private void btDel_Click(object sender, RoutedEventArgs e)
         {
+            // TODO Löschen aus Databinding
+            // TODO Löschen aus Canvas und lokaler Liste
 
+            FillCanvas();
         }
 
         private void FillCanvas()
         {
+            // TODO Bugfixing
+
+            cnvStats.Children.Clear();
             lstData = Data.AlleLesen();
 
             i = lstData.Count;
+            
             ObjWidth = cnvStats.ActualWidth / i;
-            ObjHeight = cnvStats.ActualHeight;
-
+            ObjHeight = cnvStats.ActualHeight / 100;
 
             foreach (var item in lstData)
             {
-                Label lb = new Label();
-
-                lb.Content = item.Bezeichnung;
-                lb.Background = item.Farbe;
-                lb.Height = item.Wert;
-                lb.Width = ObjWidth;
+                Label lb = new Label
+                {
+                    Content = item.Bezeichnung,
+                    Background = item.Farbe,
+                    Height = item.Wert * ObjHeight,
+                    Width = ObjWidth
+                };
 
                 posX = ObjWidth * counter;
 
@@ -83,11 +87,6 @@ namespace WPF_Statistik
             }
 
             counter = 0;
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            FillCanvas();
         }
     }
 }

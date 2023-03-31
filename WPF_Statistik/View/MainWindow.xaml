@@ -15,8 +15,6 @@
         </DataGrid>
         <Button x:Name="btNew" Background="LightGoldenrodYellow" Content="Neu" Margin="690,10,10,383" Click="btNew_Click"/>
         <Button x:Name="btDel" Content="Löschen" Background="LightGoldenrodYellow" IsEnabled="false" Margin="690,56,10,337" Click="btDel_Click"/>
-        <Canvas x:Name="cnvStats" Background="white" Margin="10,217,10,10">
-            
-        </Canvas>      
+        <Canvas x:Name="cnvStats" Background="white" Margin="10,217,10,10"/>
     </Grid>
 </Window>
