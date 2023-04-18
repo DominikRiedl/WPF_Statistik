@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Statistik"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged">
     <Grid Background="LightGray" DataContext="{StaticResource mvmodel}">
         <DataGrid Background="White" x:Name="lbData" Margin="10,13,140,283" CanUserResizeRows="False" CanUserAddRows="False" ItemsSource="{Binding LstData}" AutoGenerateColumns="False" SelectedItem="{Binding SelData}" SelectionChanged="LbData_SelectionChanged">
             <DataGrid.Columns>

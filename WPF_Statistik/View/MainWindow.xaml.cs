@@ -11,6 +11,7 @@ namespace WPF_Statistik
     public partial class MainWindow : Window
     {
         List<Data> lstData = new List<Data>();
+
         int i = 0;
         double ObjWidth = 0;
         double ObjHeight = 0;
@@ -73,7 +74,7 @@ namespace WPF_Statistik
                     Content = item.Bezeichnung,
                     Background = item.Farbe,
                     Height = item.Wert * ObjHeight,
-                    Width = ObjWidth
+                    Width = ObjWidth * 0.95
                 };
 
                 posX = ObjWidth * counter;
@@ -87,6 +88,11 @@ namespace WPF_Statistik
             }
 
             counter = 0;
+        }
+
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            FillCanvas();
         }
     }
 }
